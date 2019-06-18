@@ -6,13 +6,13 @@
 </head>
 <body>
   <header><h1>WebAssembly Video Editor</h1></header>
-  <div id="git-link"><a href="https://github.com/shamadee/web-dsp">github.com/shamadee/web-dsp</a></div>
-  <button id = "webcamButton" onclick="webcamToggle()">Switch to Webcam</button>
+  <div id="git-link" style="visibility:hidden"><a href="https://github.com/shamadee/web-dsp">github.com/shamadee/web-dsp</a></div>
+  <button id = "webcamButton" style="visibility:hidden" onclick="webcamToggle()">Switch to Webcam</button>
   <div id = 'editor'>
     <div id = 'middle-col'>
       <canvas id="c" width="720" height="486"></canvas>
       <video id="v" loop="false" autoplay style="display:none;" src="media/vid.mp4" type="video/mp4"></video>
-      <div id = "controls">
+      <div id = "controls" style="visibility:hidden" >
         <div>
           <button id = "playButton" onclick="playToggle()"><img id = "playImg" alt = "Play Button" src = "img/pause1.svg"></button>
           <button id = "rewind" onclick="rewind()"><img id = "rewindImg" alt = "Rewind" src = "img/rewind1.svg"></button>
@@ -35,15 +35,15 @@
         <div id = "stats">Loading..</div>
         <h3>Frame Rate. WASM = Green; JS = Blue;</h3>
         <canvas id = "statsCanvas" width = "400" height = "200"></canvas>
-        <h3>Choppy Video? Disable Javascript below to see WebAssembly only</h3>
-        <div id = "jsButtonDiv">
+        <h3 style="visibility:hidden">Choppy Video? Disable Javascript below to see WebAssembly only</h3>
+        <div id = "jsButtonDiv" style="visibility:hidden">
         <button id="jsButton" onclick="disableJS()">Disable Javascript</button>
         <button id = "jsCanvas" onclick="disableJsCanvas()">Hide JS Canvas</button>
         </div>
       </div>
     </div>
   </div>
-  <div id='js-container'>
+  <div id='js-container' style="visibility:hidden">
     <h1 id = "jsCanvasHeading">JS Example</h1>
     <canvas id="c2" width="640" height="360"></canvas>
     <video id="v2" loop autoplay style="display:none;"> 

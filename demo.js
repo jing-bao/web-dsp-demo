@@ -23,6 +23,8 @@ loadWASM()
       addButtons();
       graphStats();
       appendWasmCheck();
+      webcamToggle();
+      disableJsCanvas();
     })();
 });
 
@@ -310,9 +312,12 @@ function createStats() {
 }
 
 function addButtons (filtersArr) {
-  const filters = ['Normal', 'Grayscale', 'Invert', 'Bacteria', 'Sunset', 
+  /*const filters = ['Normal', 'Grayscale', 'Invert', 'Bacteria', 'Sunset', 
                   'Emboss', 'Super Edge', 'Super Edge Inv',
-                 'Gaussian Blur', 'Moss', 'Robbery', 'Brighten', 'Swamp','Ghost',  'Good Morning', 'Acid', 'Urple', 'Romance', 'Hippo', 'Longhorn', 'Security', 'Underground', 'Rooster', 'Mist', 'Tingle', 'Kaleidoscope', 'Noise', 'Forest', 'Dewdrops', 'Analog TV', 'Color Destruction', 'Hulk Edge', 'Twisted',  'Clarity', 'Sharpen','Uber Sharpen'];
+                 'Gaussian Blur', 'Moss', 'Robbery', 'Brighten', 'Swamp','Ghost',  'Good Morning', 'Acid', 'Urple', 'Romance', 'Hippo', 'Longhorn', 'Security', 'Underground', 'Rooster', 'Mist', 'Tingle', 'Kaleidoscope', 'Noise', 'Forest', 'Dewdrops', 'Analog TV', 'Color Destruction', 'Hulk Edge', 'Twisted',  'Clarity', 'Sharpen','Uber Sharpen'];*/
+  const filters = ['Normal', 'Super Edge', 'Super Edge Inv', 'Grayscale', 'Bacteria', 'Sunset', 
+                  'Emboss',
+                  'Brighten', 'Ghost', 'Urple', 'Security', 'Underground', 'Rooster', 'Mist', 'Kaleidoscope', 'Hulk Edge', 'Twisted'];
   const buttonDiv = document.createElement('div');
   buttonDiv.id = 'filters';
   const editor = document.getElementById('editor')
